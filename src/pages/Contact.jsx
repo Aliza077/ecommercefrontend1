@@ -43,9 +43,9 @@ export default function Contact() {
         <p className="studio-page-lead">Questions, design consultations, or complaints — we respond within 24 hours. Complaints are sent directly to our admin team.</p>
 
         <div className="studio-contact-info">
-          <div className="studio-contact-item"><Mail size={16} /><div><strong>Email</strong><span>hello@alistudio.com</span></div></div>
-          <div className="studio-contact-item"><Phone size={16} /><div><strong>Phone</strong><span>+1 (555) 123-4567</span></div></div>
-          <div className="studio-contact-item"><MapPin size={16} /><div><strong>Studio</strong><span>123 Design Avenue, New York</span></div></div>
+          <div className="studio-contact-item"><Mail size={16} /><div><strong>Email</strong><span>alistudio@gmail.com</span></div></div>
+          <div className="studio-contact-item"><Phone size={16} /><div><strong>Phone</strong><span>+1 (555) 123-4777</span></div></div>
+          <div className="studio-contact-item"><MapPin size={16} /><div><strong>Studio</strong><span>777 Design Avenue, New York</span></div></div>
         </div>
 
         {sent ? (
