@@ -303,14 +303,14 @@ export default function Home() {
               </button>
             </div>
           ) : (
-            <>
-              <Link to="/login" className="btn-outline" style={{ padding: '10px 22px', fontSize: '13px' }}>
+            <div className="header-auth-desktop">
+              <Link to="/login" className="btn-outline header-auth-btn">
                 Sign In
               </Link>
-              <Link to="/register" className="btn-gold" style={{ padding: '10px 22px', fontSize: '13px' }}>
+              <Link to="/register" className="btn-gold header-auth-btn">
                 Register
               </Link>
-            </>
+            </div>
           )}
 
           {/* Hamburger Menu Toggle (Mobile) */}
@@ -362,6 +362,46 @@ export default function Home() {
                 </Link>
               ))}
             </div>
+            {user ? (
+              <div className="mobile-nav-auth-row">
+                {user.role === 'Admin' && (
+                  <Link
+                    to="/dashboard"
+                    className="btn-futuristic mobile-auth-btn"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Dashboard
+                  </Link>
+                )}
+                <button
+                  type="button"
+                  className="btn-outline mobile-auth-btn"
+                  onClick={() => {
+                    logout();
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <div className="mobile-nav-auth-row">
+                <Link
+                  to="/login"
+                  className="btn-outline mobile-auth-btn"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Sign In
+                </Link>
+                <Link
+                  to="/register"
+                  className="btn-gold mobile-auth-btn"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Register
+                </Link>
+              </div>
+            )}
           </motion.div>
         )}
       </AnimatePresence>

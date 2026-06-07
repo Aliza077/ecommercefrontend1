@@ -168,11 +168,11 @@ export default function DashboardLayout() {
             <div className="dash-header-right">
               <button className="header-btn-widget" type="button" onClick={() => setShowWidgetPanel(true)}>
                 <Sliders size={14} />
-                Manage Widgets
+                <span>Manage Widgets</span>
               </button>
               <button className="header-btn-add" type="button" onClick={() => setShowAddWidget(true)}>
                 <Plus size={14} />
-                Add Widget
+                <span>Add Widget</span>
               </button>
             </div>
           )}

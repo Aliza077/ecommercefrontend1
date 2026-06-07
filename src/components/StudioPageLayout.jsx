@@ -74,7 +74,7 @@ export default function StudioPageLayout({ children, maxWidth = '1000px' }) {
 
           <Link to="/" className="btn-outline place-btn-back">
             <ArrowLeft size={12} />
-            Home
+            <span>Home</span>
           </Link>
         </div>
       </header>
